@@ -1,4 +1,4 @@
-package util;
+package com.shopper.util;
 
 import com.shopper.util.validator.EmailFormatValidator;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package util;
+package com.shopper.util;
 
 import org.junit.runner.RunWith;
 import org.springframework.test.context.junit4.SpringRunner;
