@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import javax.persistence.EntityExistsException;
 import javax.persistence.EntityNotFoundException;
 
-import static org.springframework.http.HttpStatus.BAD_REQUEST;
-import static org.springframework.http.HttpStatus.NOT_FOUND;
+import static org.springframework.http.HttpStatus.*;
 
 @RestControllerAdvice
 @Slf4j
@@ -42,5 +42,11 @@ public class ExceptionController {
     public String handleInvalidPasswordFormatException(InvalidPasswordFormatException exception) {
         log.error("Invalid password format '{}'", exception.getPassword());
         return "Invalid password format";
+    }
+
+    @ResponseStatus(CONFLICT)
+    @ExceptionHandler(EntityExistsException.class)
+    public String handleEntityExistsException(EntityExistsException exception) {
+        return "Entity already exists";
     }
 }

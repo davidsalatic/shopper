@@ -1,7 +1,6 @@
 package com.shopper.shopper.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.Entity;
@@ -13,6 +12,9 @@ import static com.shopper.util.idgenerator.IdGenerator.*;
 @Entity
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Shopper {
 
     @Id
@@ -22,4 +24,6 @@ public class Shopper {
 
     private String firstName;
     private String lastName;
+    private String email;
+    private String password;
 }
