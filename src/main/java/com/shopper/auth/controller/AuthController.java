@@ -17,10 +17,10 @@ import javax.validation.Valid;
 @RequiredArgsConstructor
 public class AuthController {
 
-    private final ShopperService shopperService;
+    private final AuthService authService;
 
     @PostMapping("/register")
     public ShopperDto register(@Valid @RequestBody RegistrationDto registrationDto) {
-        return shopperService.createUser(registrationDto);
+        return authService.register(registrationDto);
     }
 }
