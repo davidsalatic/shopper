@@ -1,7 +1,7 @@
 package com.shopper.auth.service;
 
 import com.shopper.auth.dto.RegistrationDto;
-import com.shopper.shopper.service.ShopperService;
+import com.shopper.user.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -14,7 +14,7 @@ import static org.mockito.Mockito.*;
 public class AuthServiceImplTests {
 
     @Mock
-    private ShopperService shopperService;
+    private UserService userService;
 
     @InjectMocks
     private AuthServiceImpl authService;
@@ -29,6 +29,6 @@ public class AuthServiceImplTests {
 
         authService.register(registrationDto);
 
-        verify(shopperService).createUser(registrationDto);
+        verify(userService).createUser(registrationDto);
     }
 }

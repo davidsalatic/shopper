@@ -1,8 +1,8 @@
 package com.shopper.auth.service;
 
 import com.shopper.auth.dto.RegistrationDto;
-import com.shopper.shopper.dto.ShopperDto;
+import com.shopper.user.dto.UserDto;
 
 public interface AuthService {
-    ShopperDto register(RegistrationDto registrationDto);
+    UserDto register(RegistrationDto registrationDto);
 }
