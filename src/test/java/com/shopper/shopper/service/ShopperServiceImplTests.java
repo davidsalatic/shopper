@@ -1,4 +1,4 @@
-package com.shopper.shopper;
+package com.shopper.shopper.service;
 
 import com.shopper.shopper.dto.ShopperDto;
 import com.shopper.shopper.model.Shopper;
@@ -18,7 +18,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @RunWith(SpringRunner.class)
-public class ShopperServiceImplShould {
+public class ShopperServiceImplTests {
 
     @Mock
     private ShopperRepository shopperRepository;
