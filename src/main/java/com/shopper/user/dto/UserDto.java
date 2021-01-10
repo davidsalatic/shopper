@@ -1,4 +1,4 @@
-package com.shopper.shopper.dto;
+package com.shopper.user.dto;
 
 import lombok.*;
 
@@ -7,10 +7,8 @@ import lombok.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ShopperDto {
+public class UserDto {
 
     private String id;
-    private String firstName;
-    private String lastName;
     private String email;
 }

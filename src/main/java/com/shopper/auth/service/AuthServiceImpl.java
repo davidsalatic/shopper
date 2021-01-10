@@ -1,8 +1,8 @@
 package com.shopper.auth.service;
 
 import com.shopper.auth.dto.RegistrationDto;
-import com.shopper.shopper.dto.ShopperDto;
-import com.shopper.shopper.service.ShopperService;
+import com.shopper.user.dto.UserDto;
+import com.shopper.user.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -10,10 +10,10 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class AuthServiceImpl implements AuthService {
 
-    private final ShopperService shopperService;
+    private final UserService userService;
 
     @Override
-    public ShopperDto register(RegistrationDto registrationDto) {
-        return shopperService.createUser(registrationDto);
+    public UserDto register(RegistrationDto registrationDto) {
+        return userService.createUser(registrationDto);
     }
 }
